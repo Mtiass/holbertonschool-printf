@@ -12,7 +12,6 @@ int (*_getprintf(parameters, char *s))
 	gc_t ch[] = {
 		{"c", prch},
 		{"s", prstr},
-		{"%", prpor},
 		{"d", prnum},
 		{"i", prnum},
 		{NULL, NULL}

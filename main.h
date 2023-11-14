@@ -3,7 +3,8 @@
 #include <string.h>
 #include <stdarg.h>
 /**
- * struct gc - 
+ * struct gc - has two members, a pointer char(gc) and a pointer function
+ * which takes parameters list as argument.
  * @gc: the char to be refered
  * @f: function pointer that takes a list(parameters) as variadic parameters.
  */
@@ -14,5 +15,10 @@ typedef struct gc
 } gc_t;	
 int _printf(const char *format, ...);
 int _putchar(char c);
+int (*_getprintf(parameters, char *s));
+int prchr(va_list parameters);
+int prstr(va_list parameters);
+int prnum(va_list parameters);
+void printlonnu(long int n);
 
 #endif
