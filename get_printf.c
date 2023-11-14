@@ -7,7 +7,7 @@
  * 
  * Return:
  */
-int (*_getprintf(char *s))(void *ptr)
+int (*_getprintf(parameters, char *s))
 {
 	gc_t ch[] = {
 		{"c", prch},
@@ -22,7 +22,7 @@ int (*_getprintf(char *s))(void *ptr)
 	{
 		if(strcmp(ch[i].gc , s) == 0)
 		{
-			return (ch[i].f);
+			return ((ch[i].f)(parameters));
 		}
 		i++;
 	}
