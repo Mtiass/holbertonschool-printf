@@ -18,7 +18,9 @@ for (i = 0 ; i < strlen(format) ; i++)
 {	
 	if (format[i] != NULL)
 	{
-		if (format[i] == % && (format[i + 1] == c || format[i + 1] == i	|| format[i + 1] == s || format[i + 1] == d))
+		if (format[i] == % && (format[i + 1] == c || 
+		format[i + 1] == i	|| format[i + 1] == s ||
+		format[i + 1] == d))
 			{	
 			length += get_op_func(parameters, format[i + 1]);
 			i++;
@@ -30,5 +32,6 @@ for (i = 0 ; i < strlen(format) ; i++)
 			}
 	}
 }
+va_end(parameters);
 return (length);
 }
