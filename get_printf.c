@@ -1,14 +1,16 @@
 #include "main.h"
 /**
- * _printf - 
- * @format:
+ * _printf - hola
+ * @format: hola
  *
- * Description:
+ * Description: hola
  * 
- * Return:
+ * Return: hola
  */
-int (*_getprintf(parameters, char *s))
+int (*_getprintf)(va_list parameters, const char *s)
 {
+	int i = 0;
+	
 	gc_t ch[] = {
 		{"c", prch},
 		{"s", prstr},
@@ -16,7 +18,6 @@ int (*_getprintf(parameters, char *s))
 		{"i", prnum},
 		{NULL, NULL}
 	};
-	int i = 0;
 	while (ch[i].gc != NULL)
 	{
 		if(strcmp(ch[i].gc , s) == 0)
@@ -25,5 +26,5 @@ int (*_getprintf(parameters, char *s))
 		}
 		i++;
 	}
-	return (-1);
+	return (NULL);
 }

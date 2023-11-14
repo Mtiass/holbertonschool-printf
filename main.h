@@ -10,12 +10,12 @@
  */
 typedef struct gc
 {
-	char *gc;
+	const char *gc;
 	int (*f)(va_list parameters);
 } gc_t;	
 int _printf(const char *format, ...);
 int _putchar(char c);
-int (*_getprintf(parameters, char *s));
+int (*_getprintf)(va_list parameters, const char *s);
 int prchr(va_list parameters);
 int prstr(va_list parameters);
 int prnum(va_list parameters);
