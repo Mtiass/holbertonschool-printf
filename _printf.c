@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 /**
  * _printf - 
  * @format:
@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 va_list parameters;
-int i, length;
+int i, length = 0;
 char c;
 
 va_start(parameters, format);

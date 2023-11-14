@@ -52,7 +52,7 @@ int prnum(va_list parameters)
 	if (n < 0)
 	{
 		_putchar('-');
-		n -= n;
+		n = -n;
 		c++;
 	}
 	while (n2 != 0)
