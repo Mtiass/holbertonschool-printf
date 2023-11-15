@@ -23,7 +23,7 @@ int prstr(va_list parameters)
 {
 	char *c;
 	int i = 0;
-	
+
 	c = va_arg(parameters, char *);
 	if (c != NULL)
 	{
@@ -33,7 +33,7 @@ int prstr(va_list parameters)
 	}
 	return (strlen(c));
 	}
-	else 
+	else
 	{
 		_printf("(null)");
 		return (6);
@@ -72,11 +72,11 @@ int prnum(va_list parameters)
 	return (c);
 }
 /**
- * printlonnu - function that recurses over a number and prints the last part of each
- * saved part saved.
+ * printlonnu - function that recurses over a number and prints the last part
+ * of each saved part.
  * @n: long int number to be divided and printed out.
  * Return: nothing.
- */  
+ */
 void printlonnu(long int n)
 {
 	if (n / 10)

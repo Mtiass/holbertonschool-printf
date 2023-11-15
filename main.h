@@ -10,12 +10,11 @@
  * @gc: the char to be refered
  * @f: function pointer that takes a list(parameters) as variadic parameters.
  */
-
 typedef struct gc
 {
 	char gc;
 	int (*f)(va_list parameters);
-} gc_t;	
+} gc_t;
 int _putchar(char c);
 int prchr(va_list parameters);
 int prstr(va_list parameters);
