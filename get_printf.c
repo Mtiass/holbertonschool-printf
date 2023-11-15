@@ -7,12 +7,12 @@
  * 
  * Return: hola
  */
-int (*_getprintf)(va_list parameters, const char *s)
+int _getprintf(va_list parameters, const char *s)
 {
 	int i = 0;
 	
 	gc_t ch[] = {
-		{"c", prch},
+		{"c", prchr},
 		{"s", prstr},
 		{"d", prnum},
 		{"i", prnum},
@@ -26,5 +26,5 @@ int (*_getprintf)(va_list parameters, const char *s)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

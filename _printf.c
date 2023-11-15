@@ -1,25 +1,25 @@
 #include "main.h"
 /**
- * _printf - 
- * @format:
+ * _printf - hola
+ * @format: hola
  *
- * Description:
+ * Description: hola
  * 
- * Return:
+ * Return: hola
  */
 int _printf(const char *format, ...)
 {
 va_list parameters;
-int i, length = 0;
+int i, length = 0, lenformat = strlen(format);
 char c;
 
 va_start(parameters, format);
-for (i = 0 ; i < strlen(format) ; i++)
+for (i = 0 ; i < lenformat ; i++)
 {	
 	if (format[i] != '\0')
 	{
 		if (format[i] == '%' && (format[i + 1] == 'c' || 
-		format[i + 1] == 'i'	|| format[i + 1] == 's' ||
+		format[i + 1] == 'i' || format[i + 1] == 's' ||
 		format[i + 1] == 'd'))
 			{	
 			length += _getprintf(parameters, &format[i + 1]);
