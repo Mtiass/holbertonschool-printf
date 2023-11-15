@@ -7,20 +7,19 @@
  * 
  * Return: hola
  */
-int _getprintf(va_list parameters, const char *s)
+int _getprintf(va_list parameters, char s)
 {
 	int i = 0;
 	
 	gc_t ch[] = {
-		{"c", prchr},
-		{"s", prstr},
-		{"d", prnum},
-		{"i", prnum},
-		{NULL, NULL}
+		{'c', prchr},
+		{'s', prstr},
+		{'d', prnum},
+		{'i', prnum}
 	};
-	while (ch[i].gc != NULL)
+	while (ch[i].gc != '\0')
 	{
-		if(strcmp(ch[i].gc , s) == 0)
+		if (ch[i].gc == s)
 		{
 			return ((ch[i].f)(parameters));
 		}

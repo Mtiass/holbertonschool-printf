@@ -23,13 +23,21 @@ int prstr(va_list parameters)
 {
 	char *c;
 	int i = 0;
-
+	
 	c = va_arg(parameters, char *);
+	if (c != NULL)
+	{
 	for (; i < strlen(c); i++)
 	{
 		_putchar(c[i]);
 	}
 	return (strlen(c));
+	}
+	else 
+	{
+		_printf("(null)");
+		return (6);
+	}
 }
 /**
  * prnum - function that prints a digit/number.
