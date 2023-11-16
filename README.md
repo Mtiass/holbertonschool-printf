@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[
+  <content>
 # ${1:Printf}
 
 ## Introduction
@@ -42,7 +42,7 @@ string with the struct array and call the corresponding function.
 a variable number of arguments (va_list parameters).
 
 
-## get_printf.c 
+## get\_printf.c 
 
 - Implements _getprintf function.
 
@@ -51,7 +51,7 @@ for the character from the format string in the struct array, it calls the
 corresponding function and returns the result. If no match is found, returns 0.
 
 
-## functions-printf.c
+## \functions-printf.c
 
 - Implements the prchr, prstr, prnum, and printlonnu functions.
 
@@ -86,6 +86,5 @@ function (system call).
 
 https://gist.github.com/pedronauck/5573168
 
-]]></content>
-  <tabTrigger>readme</tabTrigger>
+</content>
 </snippet>
