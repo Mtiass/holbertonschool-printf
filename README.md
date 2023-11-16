@@ -44,9 +44,9 @@ a variable number of arguments (va_list parameters).
 
 ## get\_printf.c 
 
-- Implements _getprintf function.
+Implements _getprintf function.
 
-This function iterates over an array of gc_t structs and if it finds a match
+- This function iterates over an array of gc_t structs and if it finds a match
 for the character from the format string in the struct array, it calls the
 corresponding function and returns the result. If no match is found, returns 0.
 
