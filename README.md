@@ -1,9 +1,6 @@
 <snippet>
   <content>
-## Printf function
-
-
-## Introduction
+## Printf Introduction
 
 Print formatted, shortened as printf is the main function used in printing
 formatted output to a terminal in C language.The basic version of printf use
