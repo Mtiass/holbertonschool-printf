@@ -23,13 +23,14 @@ and %i. It's uses are;
 
 It contains function declarations and a struct definition.
 
-~The gc_t struct is defined to hold a character and a function pointer.
+- The gc_t struct is defined to hold a character and a function pointer.
 The characer is used to identify the type of data ('c' for char, 's' for
 string, and 'd'/'i' for integers.
 The function pointer points to the function that handles the type of data which
 the chraracter points to.
 
-~The prototypes of;
+- The prototypes of;
+
 - _putchar function, which writes a character to the standard output.
 - prchr, prstr, and prnum functions (prchr for printing a character, prstr to
 print a string and prnum to print a number).
@@ -50,9 +51,9 @@ for the character from the format string in the struct array, it calls the
 corresponding function and returns the result. If no match is found, returns 0.
 
 
-## \functions-printf.c
+## functions-printf.c
 
-- Implements the prchr, prstr, prnum, and printlonnu functions.
+Implements the prchr, prstr, prnum, and printlonnu functions.
 
 - prchr to print single characters.
 - prstr to print a string.
@@ -61,9 +62,9 @@ corresponding function and returns the result. If no match is found, returns 0.
 
 ## \_printf.c 
 
-- Implements the main function _printf.
+Implements the main function _printf.
 
-The function starts by initializing a va_list(parameters) to handle the
+- The function starts by initializing a va_list(parameters) to handle the
 variable number of arguments, starting off the required argument (const char
 *format) followed by the optional ones.
 Then, it iterates over the format string an if it encounters a '%' character,
@@ -71,19 +72,19 @@ it checks the next one to determine the type of data and calls the
 corresponding function from the gc_t struct array. But if it encounters any
 other character (while it's not NULL or other '%' char), it simply prints that
 character.
-After processing all characters in the format string, it ends the variadic list
+- After processing all characters in the format string, it ends the variadic list
 parameters and returns the total number of characters printed.
 
 ## \_putchar.c
 
-- It implements the _putchar function.
+It implements the _putchar function.
 
-This function writes a character to the standard output using the write
+- This function writes a character to the standard output using the write
 function (system call).
 
 ## Webpage we used to write this README.md
 
-https://gist.github.com/pedronauck/5573168
+- https://gist.github.com/pedronauck/5573168
 
 </content>
 </snippet>
