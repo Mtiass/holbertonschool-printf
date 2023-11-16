@@ -1,6 +1,7 @@
 <snippet>
   <content>
-# ${1:Printf}
+## Printf function
+
 
 ## Introduction
 
