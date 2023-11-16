@@ -1,5 +1,6 @@
 <snippet>
   <content>
+
 ## Printf Introduction
 
 Print formatted, shortened as printf is the main function used in printing
