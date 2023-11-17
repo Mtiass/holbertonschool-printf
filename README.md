@@ -24,7 +24,7 @@ It contains function declarations and a struct definition.
 
 - The gc_t struct is defined to hold a character and a function pointer.
 The characer is used to identify the type of data ('c' for char, 's' for
-string, and 'd'/'i' for integers.\
+string, and 'd'/'i' for integers).\
 The function pointer points to the function that handles the type of data which
 the chraracter points to.
 
