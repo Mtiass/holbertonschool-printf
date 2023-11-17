@@ -1,6 +1,3 @@
-<snippet>
-  <content>
-
 # Printf project 
 
 ### Introduction
@@ -69,8 +66,8 @@ corresponding function and returns the result. If no match is found, returns 0.
 Implements the prchr, prstr, prnum, and printlonnu functions, the first three
 are called by the corresponding format specifier defined in the array of structs
 **gc_t** from *_getprintf* function. *printlonnu* is a helper function to print
-character by character taking and printing the rest of n divided by ten (n % 10)
-in each recursion of (n / 10).
+character by character taking and printing the rest of **n** divided by ten *(n % 10)*
+in each recursion of *(n / 10)*.
 
 - *prchr* to print single characters refered by the format specifier **c**.
 - *prstr* to print a string pointed by the format specifier **s**.
@@ -95,22 +92,22 @@ conditions:
 
 - If the character is a **%** and the next character is also **%**, it returns -1.
 
-- If the character is a '%' and the next character is not '%', it checks the
-next character to see if it's 'c', 's', 'd' or 'i'. If it is, it calls the
-_getprintf function and increments the length with the value return of the 
+- If the character is a **%** and the next character is not **%**, it checks the
+next character to see if it's **c**, **s**, **d** or **i**. If it is, it calls the
+*_getprintf* function and increments the length with the value return of the 
 corresponding function.
 
--  If the next character is not '%', it calls the _putchar function to print
+-  If the next character is not **%**, it calls the *_putchar* function to print
 the character and increments the length.
 
-- If the next character is '%', it calls the _putchar function to print the
+- If the next character is **%**, it calls the _putchar function to print the
 character, increments the length, and moves to the next character.
 
-- If the character is not '%', it calls the _putchar function to print the
+- If the character is not **%**, it calls the _putchar function to print the
 character and increments the length.
 
-After the loop, the va\_end macro is called to clean up the parameters list,
-and finally, the function returns the length of the printed string.
+After the loop, the *va\_end* macro is called to clean up the **parameters** list,
+and finally, the function returns the *length* of the printed string.
 
 ## [\_putchar.c](https://github.com/Mtiass/holbertonschool-printf/blob/master/_putchar.c)
 
@@ -120,5 +117,3 @@ It implements the _putchar function.
 function (system call).
 
 ## [How we decorated our README.md](https://www.markdownguide.org/extended-syntax/#heading-ids)
-</content>
-</snippet>
