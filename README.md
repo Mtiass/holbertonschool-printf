@@ -12,7 +12,7 @@ string.
 
 All format specifiers are written as the percent (%) sign in front of a letter
 (usually, data types). In our _printf function we defined the types %c, %s, %d
-and %i. It's uses are;\
+and %i. It's uses are;
 
 | Types   | Description |
 | ----------- | ----------- |
@@ -52,9 +52,9 @@ and the format specifier **char s**, obtained from the format string, as
 parameters.
 
 An array of gc\_t structures (defined in main.h) is initialized where each 
-gc\_t structure contains a character (gc is the format specifier)\
+gc\_t structure contains a character (gc is the format specifier),\
 and a function pointer (f, which points to the function that matches the
-corresponding format specifier).\
+corresponding format specifier).
 
 - This function iterates over an array of **gc_t** structs and if it finds a match
 for the character from the format string in the struct array, it calls the
