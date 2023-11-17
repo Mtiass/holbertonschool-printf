@@ -22,7 +22,8 @@ int _getprintf(va_list parameters, char s)
 		{'c', prchr},
 		{'s', prstr},
 		{'d', prnum},
-		{'i', prnum}
+		{'i', prnum},
+		{'\0', NULL}
 	};
 	while (ch[i].gc != '\0')
 	{
