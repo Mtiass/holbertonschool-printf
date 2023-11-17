@@ -116,4 +116,42 @@ It implements the _putchar function.
 - This function writes a character to the standard output using the write\
 function (system call).
 
+## Code example
+```
+root@74be033d1686:/holbertonschool-printf# cat main.c
+#include <limits.h>
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+        int len;
+
+        /* A simple string without format specifiers */
+        len = _printf("This is Sparta\n");
+        /* A string and an 's' format specifier */
+         _printf("String:[%s]\n", "I am a string !");
+        /* A string with a 'c' format specifier */
+         _printf("Character:[%c]\n", 'H');
+        /* A string with a 'd' argument pointing to a negative number */
+         _printf("Negative:[%d]\n", -762534);
+        /* A string with an 'i' argument */
+         _printf("Len:[%i]\n", len);
+        /* What if there are two '%' together? */
+         _printf("Percent:[%%]\n");
+         return (0);
+}
+root@74be033d1686:/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c -o test
+root@74be033d1686:/holbertonschool-printf# ./test
+This is Sparta
+String:[I am a string !]
+Character:[H]
+Negative:[-762534]
+Len:[15]
+Percent:[%]
+```
 ## [How we decorated our README.md](https://www.markdownguide.org/extended-syntax/#heading-ids)
