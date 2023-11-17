@@ -16,8 +16,7 @@ All format specifiers are written as the percent (%) sign in front of a letter
 and %i. It's uses are;\
 %d / %i for signed decimal integer.\
 %c for single characters.\
-%s for printing string characters.\
-
+%s for printing string characters.
 
 ## Library/Header file "main.h"
 
@@ -47,7 +46,7 @@ Implements _getprintf function.
 
 - This function iterates over an array of gc_t structs and if it finds a match
 for the character from the format string in the struct array, it calls the
-corresponding function and returns the result.\ If no match is found, returns 0.
+corresponding function and returns the result. If no match is found, returns 0.
 
 
 ## functions-printf.c
@@ -83,7 +82,7 @@ Implements the main function _printf.
 
 - The function starts by initializing a va_list(parameters) to handle the
 variable number of arguments, starting off the required argument (const char
-*format) followed by the optional ones.\
+*format) followed by the optional ones.
 
 The code checks if the format string is not NULL. If it is NULL, the function
 returns -1.
@@ -91,7 +90,7 @@ returns -1.
 If it is not NULL, the va_start macro initializes the parameters list. Then
 the code enters a loop that iterates over each character in the format string.\
 If the current character is not the end of the string, it checks for several
-conditions:\
+conditions:
 
 - If the character is a '%' and the next character is also '%', it returns -1.
 
@@ -109,7 +108,7 @@ character, increments the length, and moves to the next character.
 - If the character is not '%', it calls the _putchar function to print the
 character and increments the length.
 
-After the loop, the va\_end macro is called to clean up the parameters list,\
+After the loop, the va\_end macro is called to clean up the parameters list,
 and finally, the function returns the length of the printed string.
 
 ## \_putchar.c
