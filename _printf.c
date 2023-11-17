@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _printf - hola
- * @format: hola
- * Description: hola
- * Return: hola
+ * _printf - main function used to print formatted output to the terminal.
+ * @format: is the required argument, used to intialize the va_list
+ * (parameters).
+ * Return: length of everything printed in output (length of format plus the
+ * length of the variadic argument sent to the function. On error case -1.
  */
 int _printf(const char *format, ...)
 {
