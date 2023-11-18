@@ -74,11 +74,11 @@ are called by the corresponding format specifier defined in the array of structs
 - *prchr* to print single characters refered by the format specifier **c**.\
   And returns it's length (always 1).
 
-- *prstr* to print a string pointed by the format specifier **s**.
+- *prstr* to print a string pointed by the format specifier **s**.\
   It iterates over the char pointer (char *s) argument passed by (*va_list parameters*) and\
   prints every character of the string pointed with a for loop that iterates over the *s length.\
   Returns the length of s (*return (strlen(s));*).\
-  If s is equal to NULL it prints "(null)" and returns it's length (6).
+  If **s** is equal to NULL it prints "(null)" and returns it's length (6).
   
 - *prnum* to print a number refered by **d/i** format specifiers.\
   If n is 0, it prints it and increments **c** in 1 and returns it.\
