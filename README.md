@@ -2,16 +2,17 @@
 
 ### Introduction
 
-Print formatted, shortened as printf is the main function used in printing\
+"Print formatted", shortened as "printf" is the main function used for printing\
 formatted output to a terminal in C language. The basic version of printf\
-takes a string as an argument and print the exact text.
+takes a string as an argument and prints the exact text.
 
-An elaborate use of the function takes an argument, then a list of values\
+An elaborate use of the function takes an argument and also a list of values\
 separated by comma(s) to match their associated format specifiers in the
 string.
 
-All format specifiers are written as the percent **(%)** sign in front of a letter\
-(usually, data types). In our _printf function we defined the types **'%c'**, **'%s'**, **'%d'**\
+All format specifiers, also known as placeholders, use the character percent **(%)** \
+followed by another character indicating the data type of the value represented\
+In our _printf function we defined the types **'%c'**, **'%s'**, **'%d'**\
 and **'%i'**. It's uses are;
 
 | Types   | Description |
@@ -52,8 +53,8 @@ typedef struct gc
 
 Implements **_getprintf** function.
 
-The function *_getprintf* is declared with a variadic list (**va_list parameters**)\
-and the format specifier **char s**, obtained from the *format* string, as parameters.
+The function *_getprintf* receives a variadic list (**va_list parameters**)\
+and a format specifier **char s**, obtained from the *format* string.
 
 An array named (*gc_t ch[]*) of **gc\_t** structures (defined in *main.h*) is initialized,\
 where each **gc\_t** structure contains a character (**gc** that is the format specifier),\
@@ -80,14 +81,14 @@ are called by the corresponding format specifier defined in the array of structs
   Returns the length of s (*return (strlen(s));*).\
   If **s** is equal to NULL it prints "(null)" and returns it's length (6).
   
-- *prnum* to print a number refered by **d/i** format specifiers.\
-  If n is 0, it prints it and increments **c** in 1 and returns it.\
-  If it is a negative number it prints a **'-'** character, turns **n** to positive\
-  multiplying it's sing by '-' and increments **c**.\
-  While **n2**, which is a copy of **n**, is different from 0 it is divided by 10 (taking the last part\
-  of **n**) and incrementing **c** each time **n** is divisible by 10 to count the number of character that\
-  will be printed.
-  Finally *printlonnu* is called to print **n** and **c** (number of character to be printed) is returned.
+- *prnum* to print a number refered by **d/i** format specifiers and return its length in variable **c**.\
+  If n is 0, it prints it and increments **c** by 1 and returns it.\
+  If it is a negative number it prints a **'-'** character and turns **n** to positive\
+  by multiplying it's sing by '-' and increments **c** by 1.\
+  Then the function iterates through **n2**, which is a copy of **n**, each iteration checks if n has more than one digit\
+  if it does, then it is divided by 10 and increments **c** by 1, repeating the process for each digit then\
+  after the iteration is over *printlonnu* is called to print **n** recursively,\
+  returning **c** (number of characters printed) to the function _printf to add it to the total length count of the output.
   
 - *printlonnu* to help *prnum* to print a number recursively. Is a helper function to\
   print character by character taking and printing the rest of **n** divided by ten\
