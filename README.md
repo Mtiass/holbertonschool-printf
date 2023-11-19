@@ -74,8 +74,9 @@ are called by the corresponding format specifier defined in the array of structs
   And returns it's length (always 1).
 
 - *prstr* to print a string pointed by the format specifier **s**.\
-  It iterates over the char pointer (char *s) argument passed by (*va_list parameters*) and\
-  prints every character of the string pointed with a for loop that iterates over the *s length.\
+  It iterates over the char pointer (char *s) argument passed by\
+  (*va_list parameters*) and prints every character of the string\
+  pointed with a for loop that iterates over **s** length.\
   Returns the length of s (*return (strlen(s));*).\
   If **s** is equal to NULL it prints "(null)" and returns it's length (6).
   
