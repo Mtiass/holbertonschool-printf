@@ -152,6 +152,9 @@ It implements the _putchar function.
 - This function writes a character to the standard output using the write\
 function (system call).
 
+# Flowchart
+![Chart](https://i.postimg.cc/Xq34w9KS/aa2.png)
+
 ## Code example
 ```
 root@74be033d1686:/holbertonschool-printf# cat main.c
@@ -190,7 +193,5 @@ Negative:[-762534]
 Len:[15]
 Percent:[%]
 ```
-# Flowchart
-![Chart](https://i.postimg.cc/Xq34w9KS/aa2.png)
 
 ### [Clic here to see how we decorated our README.md](https://www.markdownguide.org/basic-syntax/)
