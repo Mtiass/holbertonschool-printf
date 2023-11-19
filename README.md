@@ -79,13 +79,13 @@ are called by the corresponding format specifier defined in the array of structs
   Returns the length of s (*return (strlen(s));*).\
   If **s** is equal to NULL it prints "(null)" and returns it's length (6).
   
-- *prnum* to print a number refered by **d/i** format specifiers.
+- *prnum* to print a number refered by **d/i** format specifiers.\
   If n is 0, it prints it and increments **c** by 1 and returns it.\
   If it is a negative number it prints a **'-'** character and turns **n** to\
   positive by multiplying it's sing by '-' and increments **c** by 1.\
   Then the function iterates through **n2**, which is a copy of **n**,\
   and each iteration checks if **n** is different than 0, if it is,\
-  it is divided by 10 and increments **c** in 1.
+  it is divided by 10 and increments **c** in 1.\
   After the iteration is over, *printlonnu* is called to print the reminder of\
   (**n** % 10) in each recursion of (**n** / 10), when this function is over,\
   **c** (number of characters printed) is returned to the function _printf\
