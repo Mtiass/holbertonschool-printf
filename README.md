@@ -29,8 +29,8 @@ It contains function declarations (It's prototypes) and a struct definition.
 - The **gc_t** struct is defined to hold a character and a function pointer.\
 The characer is used to identify the type of data (**'c'** for char, **'s'** for\
 string, and **'d'/'i'** for integers).\
-The function pointer points to the function that handles the type of data which\
-the chraracter points to.
+The function pointer points to the function that handles the type of\
+data which the chraracter points to.
 ```
 typedef struct gc
 {
@@ -85,10 +85,11 @@ are called by the corresponding format specifier defined in the array of structs
   If n is 0, it prints it and increments **c** by 1 and returns it.\
   If it is a negative number it prints a **'-'** character and turns **n** to positive\
   by multiplying it's sing by '-' and increments **c** by 1.\
-  Then the function iterates through **n2**, which is a copy of **n**, each iteration checks if n has more than one digit\
-  if it does, then it is divided by 10 and increments **c** by 1, repeating the process for each digit then\
-  after the iteration is over *printlonnu* is called to print **n** recursively, when this recursion is over,\
-   **c** (number of characters printed) is returned to the function _printf to add it to the total length count of the output.
+  Then the function iterates through **n2**, which is a copy of **n**, each iteration checks if n\
+  has more than one digit if it does, then it is divided by 10 and increments **c** by 1,\
+  repeating the process for each digit then after the iteration is over *printlonnu* is\
+  called to print **n** recursively, when this recursion is over, **c** (number of characters printed)\
+  is returned to the function _printf to add it to the total length count of the output.
   
 - *printlonnu* to help *prnum* to print a number recursively. Is a helper function to\
   print character by character taking and printing the rest of **n** divided by ten\
@@ -98,45 +99,50 @@ are called by the corresponding format specifier defined in the array of structs
 
 Implements the main function *_printf*.
 
-- The function starts by initializing a **va_list(parameters)** to handle the\
-variable number of arguments, starting off the required argument (const char *format)\
-followed by the optional ones. Initializes 3 variable integers, i, length and lenformat.\
-**i** as the index, to iterate over format's length using **lenformat** to do it.\
-And **length** to count and return the number of characters of the printed format
-output. 
+1. The function starts by initializing a **va_list(parameters)** to handle the\
+variable number of arguments, starting off the required argument\
+(const char *format). It also initializes 3 integer variables;\
+**i** as the index, **lenformat** (to make the size of *format* an integer and)\
+**length** (to count and return the length of formatted output).
 
-- The code checks if the format string is not **NULL**. If it is **NULL**,\
-the function returns -1.
+2. Then the code checks if the format string is not **NULL**;
+
+- If it is **NULL**, the function returns -1.
  
 - If it is not **NULL**, the *va_start* macro initializes the *parameters* list.\
 And assigns length of *format* to the int variable **lenformat**.
-Then the code enters a for loop that iterates over each character in the *format*\ string.
 
-If the current character is not the end of the string, it checks for several conditions:
+3. Then the code enters a for loop that iterates **i** over each character\
+in the *format* string making i to be less than **lenformat**'s size .
 
-- If the character is a **%** and the next character is **'\0'**, it returns -1.
+4. If the current character is not the end of the string,\
+it checks for several conditions:
 
-- If the character is a **%** and the next character is not **'\0'**;
+- If the current character is a **%** and the next character is **'\0'**,\
+it returns -1.
 
-It checks the next character to see if it's **'c'**, **'s'**, **'d'** or **'i'**.\
-If it is, it calls the *_getprintf* function to compare the next character with\
-each member of the *ch* structure array until both are the same to call the function\
-pointed by the *ch* struc. array member. Finally, the total **length** increases with\
-the value return of the corresponding function and increment i in 1. If there are no\ 
-coincidences between the current character and any member of the struct array **ch**\
+- If the current character is a **%** and the next character is not **'\0'**.\
+It checks the next character to see if it is **'c'**, **'s'**, **'d'** or **'i'**.\
+If it is, it calls the *_getprintf* function to compare the next character\
+with each member of the *ch* structure array until both are the same, to call\
+the function pointed by the coincident *ch* structure array member.\
+Finally, the total **length** increases with the value return of the\
+corresponding function and i increases in 1. If there are no coincidences,\
 *_getprintf* returns 0.
 
-If the next character isn't  **'c'**, **'s'**, **'d'**,**'i'** or **%**, it calls the *_putchar*\
-function to print the current character, and increases the length in 1.
+- If the next character isn't  **'c'**, **'s'**, **'d'**,**'i'** or **%**,\
+it calls the *_putchar* function to print the current character, and increases\
+**length** in 1.
 
-If the next character is **%**, it prints the current character, increases i in 1,\
-and length in 1, too.
+- If the next character is **%**, it prints the current character,\
+increases i in 1, and **length** in 1, too.
 
 - If the current character is not **%**, it calls the *_putchar* function to print\
-the current character and increase the length in 1.
+the actual character and increase **length** in 1.
 
-After the for loop finishes, the *va\_end* macro is called to clean up the **parameters**\
-list, and finally, the function returns the *length* of the printed format output.
+5. After the *for* loop finishes, the *va\_end* macro is called to clean up\
+the **parameters** list, and finally, the function returns the total **length**\
+(of the printed output).
 
 ## [\_putchar.c](https://github.com/Mtiass/holbertonschool-printf/blob/master/_putchar.c)
 
