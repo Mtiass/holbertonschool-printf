@@ -99,8 +99,8 @@ are called by the corresponding format specifier defined in the array of structs
 
 Implements the main function *_printf*.
 
-1. The function starts by initializing a **va_list(parameters)** to handle the\
-variable number of arguments, starting off the required argument\
+1. The function starts by initializing a **va_list(parameters)** to handle\
+the variable number of arguments, starting off the required argument\
 (const char *format). It also initializes 3 integer variables;\
 **i** as the index, **lenformat** (to make the size of *format* an integer and)\
 **length** (to count and return the length of formatted output).
@@ -127,7 +127,7 @@ If it is, it calls the *_getprintf* function to compare the next character\
 with each member of the *ch* structure array until both are the same, to call\
 the function pointed by the coincident *ch* structure array member.\
 Finally, the total **length** increases with the value return of the\
-corresponding function and i increases in 1. If there are no coincidences,\
+corresponding function and **i** increases in 1. If there are no coincidences,\
 *_getprintf* returns 0.
 
 - If the next character isn't  **'c'**, **'s'**, **'d'**,**'i'** or **%**,\
@@ -135,14 +135,14 @@ it calls the *_putchar* function to print the current character, and increases\
 **length** in 1.
 
 - If the next character is **%**, it prints the current character,\
-increases i in 1, and **length** in 1, too.
+increases **i** in 1, and **length** in 1, too.
 
 - If the current character is not **%**, it calls the *_putchar* function to print\
 the actual character and increase **length** in 1.
 
 5. After the *for* loop finishes, the *va\_end* macro is called to clean up\
-the **parameters** list, and finally, the function returns the total **length**\
-(of the printed output).
+the **parameters** list, and finally, the function returns the total\
+**length** (of the printed output).
 
 ## [\_putchar.c](https://github.com/Mtiass/holbertonschool-printf/blob/master/_putchar.c)
 
