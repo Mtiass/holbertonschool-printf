@@ -175,4 +175,4 @@ Percent:[%]
 ```
 ## [Clic here to see how we decorated our README.md](https://www.markdownguide.org/basic-syntax/)
 
-![Chart](https://ibb.co/SVvjQ9z)
+![Chart](https://postimg.cc/ZBfGmBDV)
