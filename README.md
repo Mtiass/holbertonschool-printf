@@ -10,9 +10,9 @@ An elaborate use of the function takes an argument and also a list of values\
 separated by comma(s) to match their associated format specifiers in the string.
 
 All format specifiers, also known as placeholders, use the character percent **(%)** \
-followed by another character indicating the data type of the value represented\
+followed by another character indicating the data type of the value represented.\
 In our _printf function we defined the types **'%c'**, **'%s'**, **'%d'**\
-and **'%i'**. It's uses are;
+and **'%i'**. It's uses are:
 
 | Types   | Description 		      |
 | ------- | ----------- 		      |
@@ -26,10 +26,10 @@ and **'%i'**. It's uses are;
 It contains function declarations (It's prototypes) and a struct definition.
 
 - The **gc_t** struct is defined to hold a character and a function pointer.\
-The characer is used to identify the type of data (**'c'** for char,\
+The character is used to identify the type of data (**'c'** for char,\
 **'s'** for string, and **'d'/'i'** for integers).\
 The function pointer points to the function that handles the type of\
-data which the chraracter points to.
+data which the character points to.
 ```
 typedef struct gc
 {
@@ -70,7 +70,7 @@ Implements the *prchr*, *prstr*, *prnum*, and *printlonnu* functions, the first 
 are called by the corresponding format specifier defined in the array of structs\
 **gc_t** from *_getprintf* function. 
 
-- *prchr* to print single characters refered by the format specifier **c**.\
+- *prchr* to print single characters referred by the format specifier **c**.\
   And returns it's length (always 1).
 
 - *prstr* to print a string pointed by the format specifier **s**.\
@@ -80,7 +80,7 @@ are called by the corresponding format specifier defined in the array of structs
   Returns the length of s (*return (strlen(s));*).\
   If **s** is equal to NULL it prints "(null)" and returns it's length (6).
   
-- *prnum* to print a number refered by **d/i** format specifiers.\
+- *prnum* to print a number referred by **d/i** format specifiers.\
   If n is 0, it prints it and increments **c** by 1 and returns it.\
   If it is a negative number it prints a **'-'** character and turns **n** to\
   positive by multiplying it's sing by '-' and increments **c** by 1.\
@@ -98,7 +98,7 @@ function that takes and prints the rest of **n** divided by ten\
 
 ## [\_printf.c](https://github.com/Mtiass/holbertonschool-printf/blob/master/_printf.c) 
 
-Implements the main function *_printf*.
+Implements the function *_printf*.
 
 1. The function starts by initializing a **va_list(parameters)** to handle\
 the variable number of arguments, starting off the required argument\
