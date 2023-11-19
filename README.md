@@ -15,11 +15,11 @@ followed by another character indicating the data type of the value represented\
 In our _printf function we defined the types **'%c'**, **'%s'**, **'%d'**\
 and **'%i'**. It's uses are;
 
-| Types   | Description |
-| ----------- | ----------- |
-| %d / %i |for signed decimal integer|
-|  %c     | for single characters|
-|  %s     | to print string character|
+| Types   | Description 		      |
+| ------- | ----------- 		      |
+| %d / %i | for signed and unsigned integers  |
+|  %c     | for single characters             |
+|  %s     | to print string character         |
 
 
 ## [Library/Header file "main.h"](https://github.com/Mtiass/holbertonschool-printf/blob/master/main.h)
@@ -38,10 +38,10 @@ typedef struct gc
 	int (*f)(va_list parameters);
 } gc_t;
 ```
-| Function name | Prototype  | Short description |
+| Function name  | Prototype  | Short description |
 | :------------: |:---------------| :-----|
 | *_putchar* | int _putchar(char c);| Writes a character to the standard output. |
-| *prchr*   | int prchr(va_list parameters); | Prints a character |
+| *prchr*    | int prchr(va_list parameters); | Prints a character |
 | *prstr* | int prstr(va_list parameters);  | Prints a string |
 | *prnum* | int prnum(va_list parameters);  | Prints a number |
 | *printlonnu* | void printlonnu(long int n); | Function used to print a number recursively as a helper for  *prnum* |
@@ -87,8 +87,8 @@ are called by the corresponding format specifier defined in the array of structs
   by multiplying it's sing by '-' and increments **c** by 1.\
   Then the function iterates through **n2**, which is a copy of **n**, each iteration checks if n has more than one digit\
   if it does, then it is divided by 10 and increments **c** by 1, repeating the process for each digit then\
-  after the iteration is over *printlonnu* is called to print **n** recursively,\
-  returning **c** (number of characters printed) to the function _printf to add it to the total length count of the output.
+  after the iteration is over *printlonnu* is called to print **n** recursively, when this recursion is over,\
+   **c** (number of characters printed) is returned to the function _printf to add it to the total length count of the output.
   
 - *printlonnu* to help *prnum* to print a number recursively. Is a helper function to\
   print character by character taking and printing the rest of **n** divided by ten\
