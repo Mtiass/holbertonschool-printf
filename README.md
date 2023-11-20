@@ -83,7 +83,7 @@ are called by the corresponding format specifier defined in the array of structs
 - *prnum* to print a number referred by **d/i** format specifiers.\
   If n is 0, it prints it and increments **c** by 1 and returns it.\
   If it is a negative number it prints a **'-'** character and turns **n** to\
-  positive by multiplying it's sing by '-' and increments **c** by 1.\
+  positive by multiplying it's sign by '-' and increments **c** by 1.\
   Then the function iterates through **n2**, which is a copy of **n**,\
   and each iteration checks if **n** is different than 0, if it is,\
   it is divided by 10 and increments **c** in 1.\
